@@ -2,7 +2,8 @@
 
 .container-main {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
+    /* grid-template-columns: repeat(3, 1fr); */
     grid-template-rows: 230px 420px 230px;
     background-image: url("../img/background.png");
     background-repeat: no-repeat;
@@ -32,7 +33,7 @@ h2 {
     background-color: #fff44f;
     display: inline-block;
     font-size: 0.98em;
-    padding: 5px 5px;
+    padding: 0.3em 0.3em;
     margin-bottom: 0px;
     text-transform: uppercase;
 }
@@ -69,7 +70,7 @@ p span {
 }
 
 .item-4 {
-    padding-top: 15%;
+    padding-top: 4.5em;
 }
 
 .item-5 {
@@ -83,7 +84,7 @@ p span {
 }
 
 .item-6 {
-    padding-top: 15%;
+    padding-top: 4.5em;
     text-align: right;
     padding-right: 10%;
 }
@@ -99,35 +100,37 @@ p span {
     padding-top: 10%;
 }
 
+
+
 /*==== RESPONSIVENESS ====*/
 
 /* Extra small devices (phones, 600px and down) */
-@media only screen and (max-width: 600px) {
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 375px), (max-width: 667px) {
     .container-main {
         display: grid;
-        grid-template-columns: 1fr;
+        grid-template-columns: repeat(auto-fit, minmax(375px, 1fr));
         grid-template-rows: 230px 230px 230px 400px 400px 400px 230px 230px 230px;
-    }
-    .item-4 .item-6 {
-        padding-bottom: 20px;
+        margin: 2% 5%;
     }
 }
 
-/* Small devices (portrait tablets and large phones, 600px and up) */
-@media only screen and (min-width: 600px) {
+@media only screen and (min-width: 414px), (max-width: 736px) {
     .container-main {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
+        grid-template-columns: repeat(auto-fit, minmax(414px, 1fr));
         grid-template-rows: 230px 230px 230px 400px 400px 400px 230px 230px 230px;
+        margin: 2% 5%;
     }
 }
 
 /* Medium devices (landscape tablets, 768px and up) */
-@media only screen and (min-width: 768px) {
+@media only screen and (min-width: 768px), (min-width: 992px) {
     .container-main {
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: 250px 380px 380px 380px 250px;
+        margin: 2% 2%;
     }
     .item-2, .item-9 {
         background-color: #fcf0ef;
@@ -138,11 +141,13 @@ p span {
 }
 
 /* Large devices (laptops/desktops, 992px and up) */
-@media only screen and (min-width: 992px) {
+/* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
     .container-main {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-template-rows: 230px 420px 230px;
+        margin: 2% 2%;
     }
     .item-3 {
         background-color: white;
@@ -152,18 +157,6 @@ p span {
     }
 }
 
-/* Extra large devices (large laptops and desktops, 1200px and up) */
-@media only screen and (min-width: 1200px) {
-    .container-main {
-        display: grid;
-        grid-template-columns: repeat(3, 1fr);
-        grid-template-rows: 230px 420px 230px;
-    }
-    .item-3 {
-        background-color: white;
-    }
-    .item-9 {
-        background-color: white;
-    }
-}
+
+
     
